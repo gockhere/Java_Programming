@@ -1,0 +1,28 @@
+package day11_string;
+
+import java.util.Scanner;
+
+public class LongestStrip {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("enter the first string:");
+        String first = input.nextLine();
+
+        System.out.println("enter the second string :" );
+        String second = input.nextLine();
+
+        input.close();
+
+        if (first.length()>second.length()){
+            System.out.println("first string is the longest");
+
+        } else if (first.length()<second.length()) {
+            System.out.println("second is the longest");
+        }else {
+            System.out.println("equal");
+        }
+
+
+    }
+}
