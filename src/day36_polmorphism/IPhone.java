@@ -1,14 +1,14 @@
-package day30_inheritance.phoneTask;
+package day36_polmorphism;
 
 import java.util.Arrays;
 
-public class Phone {
+public class IPhone {
 
     private String brand, model,size;
     private double price;
     private String color;
 
-    public Phone(String brand, String model, String size, double price, String color) {
+    public IPhone(String brand, String model, String size, double price, String color) {
         setBrand(brand);
         setModel(model);
         setSize(size);
@@ -84,22 +84,44 @@ public class Phone {
                 ", color='" + color + '\'' +
                 '}';
     }
+
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if(!(obj instanceof IPhone)){  // if the given object is not iphone
+            System.err.println("Invalid object, Object must be IPhone");
+            System.exit(1);
+        }
+
+        if(obj instanceof IPhone){ // if the given object is iphone
+
+            if(model.equals(((IPhone) obj).model)){ // if the model of the iphone is equal to given iphone model
+
+                if(color.equals(((IPhone) obj).color)){ // if the color of iphone model is equal to given iphone model color
+                    return false;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-/*
-1. Create a named Phone:
-				Variables:
-					brand, model, size, price, color
-
-				Encapsulate all the fields
-					Conditions:
-						1. price can not be zero or negative
-						2. color can only be set to:
-								{"Black", "White", "Silver", "Gold", "Pink"}
-
-				Add a constructor that can set all the fields
-
-				Methods:
-					call(long phoneNumber)
-					text(long phoneNumber)
-					toString()
- */

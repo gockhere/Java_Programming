@@ -112,6 +112,9 @@ public class Animal {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public void scratch() {
+    }
 }
 /*
 0. Animal

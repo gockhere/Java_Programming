@@ -5,7 +5,7 @@ public class TestEmployeeObjects {
 
 
      // Employee employee= new Employee("Daniel",54,'M',"A1","SDET",12322);
-        // WE CAN NOT CREATE OBJECCTS FROM ABSTRACT CLASS , OBJECT MUST BE CREATED FROM A CONCRETE CLASS
+        // WE CAN NOT CREATE OBJECTS FROM ABSTRACT CLASS , OBJECT MUST BE CREATED FROM A CONCRETE CLASS
 
         Teacher teacher= new Teacher("James",45,'M',"B1","Math teacher",75000);
 
